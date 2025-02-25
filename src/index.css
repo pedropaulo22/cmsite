@@ -1,0 +1,157 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  background-color: #159dec;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o nav */
+  padding: 0 20px; /* Adiciona espaço nas laterais */
+}
+
+nav img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+header ul li {
+  margin: 0 1rem;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button-entrar {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px; /* Adiciona espaço à direita do botão */
+  transition: background-color 0.3s;
+}
+
+.button-entrar:hover {
+  background-color: #006600; /* Verde mais escuro no hover */
+}
+
+/* Wrapper para o botão entrar */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 100px; /* Garante um espaço mínimo */
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header ul li {
+    margin: 0.5rem 0;
+  }
+
+  .button-entrar {
+    margin-top: 1rem;
+    margin-right: 0; /* Remove a margem direita em telas pequenas */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .button-container {
+    width: 100%;
+  }
+}
+
+main {
+  padding: 2rem;
+  margin-top: 4rem; /* Adjust as necessary to avoid content being hidden behind the header */
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #159dec;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  position: fixed; /* ou absolute, dependendo do comportamento desejado */
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Garante que o footer fique acima de outros elementos */
+}
+
+/* Container interno para organizar o conteúdo */
+footer .footer-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem; /* Reduz o padding */
+    position: relative; /* Muda para relative se não quiser fixo em telas menores */
+  }
+
+  footer .footer-container {
+    padding: 0 0.5rem;
+  }
+
+  footer p {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 0.25rem; /* Reduz ainda mais o padding */
+  }
+
+  footer p {
+    font-size: 12px; /* Reduz o tamanho da fonte para telas muito pequenas */
+  }
+}

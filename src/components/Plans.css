@@ -1,0 +1,129 @@
+/* Container principal */
+.plans-section {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container para os cartões de planos */
+.plans-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap; /* Impede que os cartões quebrem para a próxima linha */
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Cartão de plano */
+.plan-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1; /* Todos os cartões terão o mesmo tamanho */
+  min-width: 0; /* Permite que os cartões se comprima quando necessário */
+  max-width: calc(33.33% - 1rem); /* Garantindo que todos tenham largura igual */
+}
+
+/* Título do plano */
+.plan-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Preço do plano */
+.plan-price {
+  font-size: 1.25rem;
+  color: #1187F4;
+  margin-bottom: 1rem;
+}
+
+/* Descrição do plano */
+.plan-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Lista de funcionalidades */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.plan-features li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.plan-features li::before {
+  content: "✓";
+  color: #1187F4;
+  position: absolute;
+  left: 0;
+}
+
+/* Botão do plano */
+.plan-button {
+  background-color: #1187F4;
+  border-radius: 5px;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.plan-button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.plan-button:hover {
+  background-color: #0f7bb5;
+}
+
+/* Botão de alternância de planos */
+.plan-toggle {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.plan-toggle button {
+  background-color: #1187F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plan-toggle button:hover {
+  background-color: #0f7bb5;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .plan-card {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 1.5rem;
+  }
+}
